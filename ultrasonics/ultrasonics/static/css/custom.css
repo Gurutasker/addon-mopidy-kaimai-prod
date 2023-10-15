@@ -1,0 +1,264 @@
+/* Variables */
+:root {
+  --primary-1: #1ce5b5;
+  --primary-2: #e234ce;
+  --dark: #111111;
+  --grey: #b5b5b5;
+  --grey-dark: #4a4a4a;
+  --grey-darker: #171717;
+}
+
+.p1 {
+    color: var(--primary-1);
+}
+
+.p2 {
+    color: var(--primary-2);
+}
+
+::selection {
+    background: var(--primary-1);
+    color: var(--grey-darker);
+}
+::-moz-selection {
+    background: var(--primary-1);
+    color: var(--grey-darker);
+}
+
+/* Light and dark mode */
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: #111111;
+    }
+
+    select {
+        background: #111111 !important;
+        color: white !important;
+    }
+
+    .tag.is-edit {
+        color: var(--primary-2);
+        background-color: white;
+        width: 2em;
+    }
+
+    .tag.is-edit:hover {
+        background-color: #171717;
+    }
+
+    .button.is-static {
+        background-color: var(--dark);
+    }
+
+    body {
+        background-image: url(/static/images/static.png);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    body {
+        background-image: url(/static/images/static-invert.png);
+    }
+
+    .button.is-static {
+        background-color: white;
+    }
+
+}
+
+/* App-wide changes */
+body {
+    min-height: 100vh;
+}
+
+body.has-background-animated {
+    background-image: url(/static/images/dirt.png);
+    background-size: 20vw 20vh;
+    animation: animatedBackground 40s linear infinite;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100vw 100vh; }
+}
+
+body, button, input, select, textarea, .is-family-monospace {
+    font-family: 'Roboto Mono', monospace !important;
+}
+
+img {
+    pointer-events: none;
+}
+
+div[hidden] {
+  display: none;
+}
+
+/* Specific elements */
+#plugin_builder .plugin {
+    /* General Formatting */
+    flex: none;
+    width: 100%;
+    height: 200px;
+}
+#plugin_builder .plugin:not(:last-of-type) {
+    margin-right: 1%;
+}
+
+#plugin_builder .plugin:not(:first-of-type) {
+    margin-left: 1%;
+}
+
+.plugin:hover {
+    border-color: var(--primary-1);    
+}
+
+.plugin div {
+    max-width: 100%;
+}
+
+.plugin div p {
+    white-space: initial;
+}
+
+.has-content-centered {
+    justify-content: center;
+}
+
+.column.logo {
+    flex: none;
+    width: 41.66667%;
+    margin-bottom: -3%;
+}
+
+.column.logo img {
+    position: relative;
+    left: -2.5vw;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.tooltip.is-tooltip-danger::before {
+    background: var(--primary-2);
+}
+
+.tooltip.is-tooltip-danger.is-tooltip-right:not(.is-loading)::after {
+    border-color: transparent var(--primary-2) transparent transparent;
+}
+
+.tooltip.tooltip-multiline::before {
+    white-space: pre;
+    text-align: center;
+}
+
+.tag.data {
+    flex: 1;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.tags.data {
+    display: flex;
+}
+
+.tag.is-delete, .tag.is-edit, .tag.is-run {
+    width: 2em;
+    color: white;
+    background-color: var(--grey-darker);
+}
+
+.tag.is-lastrun {
+    width: 2.5em;
+}
+
+.tag:not(body).is-delete:hover {
+    color: white;
+    background-color: var(--primary-2);
+}
+
+.tag.is-edit:hover {
+    color: var(--primary-2);
+    background-color: white;
+}
+
+.tag.is-run:hover {
+    background-color: var(--primary-1);
+}
+
+a.tag:hover {
+    text-decoration: none;
+}
+
+.tag:not(body).is-primary {
+    background-color: var(--primary-1);
+    color: #111111;
+}
+
+.field:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .textarea:active, .textarea:focus {
+	border-color: var(--primary-1);
+	box-shadow: 0 0 0 .125em rgba(50,115,220,.25);
+}
+
+.has-grey-links a {
+    color: var(--grey);
+}
+
+.has-grey-links a:hover {
+    color: var(--grey-dark);
+}
+
+.has-grey-links a .p2:hover {
+    color: var(--grey-dark);
+}
+
+.has-grey-links.no-hover a:hover {
+    color: var(--grey);
+}
+
+.has-white-links a {
+    color: white;
+}
+
+.has-white-links a:hover {
+    color: var(--grey);
+}
+
+.button.auth {
+    width: 100%;
+    height: 5em;
+}
+
+.button:focus:not(:active), .button.is-focused:not(:active) {
+	border: var(--primary-1) solid 1px;
+}
+
+.welcome-image {
+    border: var(--grey-dark) solid 1px;
+    border-radius: 4px;
+    margin: 2em 8em 2em 8em;
+    width: calc(100% - 16em);
+}
+
+.welcome-page p {
+    margin-bottom: 4em;
+}
+
+/* #div_service_select {
+    flex-wrap: wrap;
+}
+
+.height-is-200 {
+    height: 200px;
+}
+
+.has-text-centered.p {
+    width: 100%;
+} */
