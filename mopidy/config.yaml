@@ -1,10 +1,10 @@
 ---
-name: Mopidy
-version: dev26
+name: Mopidy Lounge
+version: dev1
 slug: mopidy
 panel_icon: mdi:music-circle
 description: Mopidy is an extensible music server
-url: https://github.com/Gurutasker/addon-mopidy-waikanae
+url: https://github.com/Gurutasker/addon-mopidy-lounge-prod
 ingress: true
 ingress_entry: iris/
 ingress_stream: true
@@ -15,7 +15,7 @@ audio: true
 ports:
   6600/tcp: 6600
   5555/udp: 5555
-  4478/tcp: 6680
+  6680/tcp: 6680
 ports_description:
   6600/tcp: Mopidy
   5555/udp: Autoaudiosink
