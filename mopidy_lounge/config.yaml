@@ -1,6 +1,6 @@
 ---
 name: Mopidy Lounge
-version: dev2
+version: dev3
 slug: mopidy_lounge
 panel_icon: mdi:music-circle
 description: Mopidy is an extensible music server
@@ -15,8 +15,7 @@ audio: true
 ports:
   6600/tcp: 6600
   5555/udp: 5555
-  6680/tcp: 6680
-  4478/tcp: 4478
+  4478/tcp: 6680
 ports_description:
   6600/tcp: Mopidy
   5555/udp: Autoaudiosink
