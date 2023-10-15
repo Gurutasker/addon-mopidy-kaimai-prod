@@ -1,7 +1,7 @@
 ---
 name: Ultrasonics
 version: dev1
-slug: mopidy_percy
+slug: ultrasonics
 panel_icon: mdi:music-circle
 description: Playlist management
 url: https://github.com/Gurutasker/addon-mopidy-lounge-prod
