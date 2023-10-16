@@ -40,7 +40,7 @@ RUN \
         build-essential=12.9 \
         python3-dev=3.11.2-1+b1 \
         python3-gi=3.42.2-3+b1 \
-        python3-gst-1.22.0-2 \
+        python3-gst-1.0=1.22.0-2 \
         gstreamer1.0-alsa=1.22.0-3+deb12u1 \
         gstreamer1.0-plugins-bad=1.22.0-4+deb12u1 \
         gstreamer1.0-plugins-good=1.22.0-5+deb12u1 \
