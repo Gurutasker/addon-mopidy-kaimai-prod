@@ -15,12 +15,12 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        dirmngr=2.2.40-1.1 \
-        gpg-agent=2.2.40-1.1 \
-        gpg=2.2.40-1.1 \
-        gnupg=2.2.40-1.1\
-        nginx=1.22.1-9 \
-        git=1:2.39.2-1.1
+        dirmngr=2.2.12-1+deb10u2 \
+        gpg-agent=2.2.12-1+deb10u2 \
+        gpg=2.2.12-1+deb10u2 \
+        gnupg=2.2.12-1+deb10u2\
+        nginx=1.14.2-2+deb10u5 \
+        git=1:2.20.1-2+deb10u3
 
 COPY mopidy.list /etc/apt/sources.list.d/
 
@@ -30,22 +30,22 @@ RUN \
     && apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        libffi-dev=3.4.4-1 \
-        libxml2-dev=2.9.14+dfsg-1.3~deb12u1 \
-        libxslt1-dev=1.1.35-1 \
-        libasound2-dev=1.2.8-1+b1 \
+        libffi-dev=3.2.1-9 \
+        libxml2-dev=2.9.4+dfsg1-7+deb10u6 \
+        libxslt1-dev=1.1.32-2.2~deb10u2 \
+        libasound2-dev=1.1.8-1 \
         libspotify12=12.1.51-1 \
         libspotify-dev=12.1.51-1 \
-        zlib1g-dev=1:1.2.13.dfsg-1 \
-        build-essential=12.9 \
-        python3-dev=3.11.2-1+b1 \
-        python3-gi=3.42.2-3+b1 \
-        python3-gst-1.22.0-2 \
-        gstreamer1.0-alsa=1.22.0-3+deb12u1 \
-        gstreamer1.0-plugins-bad=1.22.0-4+deb12u1 \
-        gstreamer1.0-plugins-good=1.22.0-5+deb12u1 \
-        gstreamer1.0-plugins-ugly=1.22.0-2+deb12u1 \
-        gstreamer1.0-pulseaudio=1.22.0-5+deb12u1 \
+        zlib1g-dev=1:1.2.11.dfsg-1+deb10u2 \
+        build-essential=12.6 \
+        python3-dev=3.7.3-1 \
+        python3-gi=3.30.4-1 \
+        python3-gst-1.0=1.14.4-1+b1 \
+        gstreamer1.0-alsa=1.14.4-2+deb10u2 \
+        gstreamer1.0-plugins-bad=1.14.4-1+deb10u3 \
+        gstreamer1.0-plugins-good=1.14.4-1+deb10u3 \
+        gstreamer1.0-plugins-ugly=1.14.4-1+deb10u2 \
+        gstreamer1.0-pulseaudio=1.14.4-1+deb10u3 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
