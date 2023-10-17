@@ -48,7 +48,10 @@ RUN \
         gstreamer1.0-pulseaudio=1.22.0-5+deb12u1 \
     \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
-    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
+    && python3 -m venv .venv \
+    && source .venv/bin/activate \
+    && python3 -m pip3 install --no-cache-dir -r /tmp/requirements.txt \
+#    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
     && find /usr/local/lib/python3.7/ -type d -name tests -depth -exec rm -rf {} \; \
     && find /usr/local/lib/python3.7/ -type d -name test -depth -exec rm -rf {} \; \
