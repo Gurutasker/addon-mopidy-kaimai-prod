@@ -1,6 +1,6 @@
 ---
 name: Mopidy Percy
-version: dev17
+version: dev18
 slug: mopidy_percy
 panel_icon: mdi:music-circle
 description: Mopidy is an extensible music server

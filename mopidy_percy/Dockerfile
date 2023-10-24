@@ -47,34 +47,34 @@ RUN \
         gstreamer1.0-plugins-ugly=1.22.0-2+deb12u1 \
         gstreamer1.0-pulseaudio=1.22.0-5+deb12u1 \
     \
-    && curl https://bootstrap.pypa.io/get-pip.py | python3 \
-    && rm /usr/lib/python3.11/EXTERNALLY-MANAGED \
-    && pip3 install --no-cache-dir -r /tmp/requirements.txt \
-    \
-    && find /usr/local/lib/python3.11/ -type d -name tests -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.11/ -type d -name test -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.11/ -name __pycache__ -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.11/ -name "*.pyc" -depth -exec rm -f {} \; \
-    \
-    && apt-get purge -y --auto-remove \
-        dirmngr \
-        gpg-agent \
-        gpg \
-        git \
-        libffi-dev \
-        libxml2-dev \
-        libxslt1-dev \
-        zlib1g-dev \
-        build-essential \
-        gcc \
-        python-dev \
-        dpkg-dev \
-        gcc-7 \
-    && rm -fr \
-        /var/{cache,log}/* \
-        /var/lib/apt/lists/* \
-        /root/.cache \
-    && find /tmp/ -mindepth 1  -delete \
+    # && curl https://bootstrap.pypa.io/get-pip.py | python3 \
+    # && rm /usr/lib/python3.11/EXTERNALLY-MANAGED \
+    # && pip3 install --no-cache-dir -r /tmp/requirements.txt \
+    # \
+    # && find /usr/local/lib/python3.11/ -type d -name tests -depth -exec rm -rf {} \; \
+    # && find /usr/local/lib/python3.11/ -type d -name test -depth -exec rm -rf {} \; \
+    # && find /usr/local/lib/python3.11/ -name __pycache__ -depth -exec rm -rf {} \; \
+    # && find /usr/local/lib/python3.11/ -name "*.pyc" -depth -exec rm -f {} \; \
+    # \
+    # && apt-get purge -y --auto-remove \
+    #     dirmngr \
+    #     gpg-agent \
+    #     gpg \
+    #     git \
+    #     libffi-dev \
+    #     libxml2-dev \
+    #     libxslt1-dev \
+    #     zlib1g-dev \
+    #     build-essential \
+    #     gcc \
+    #     python-dev \
+    #     dpkg-dev \
+    #     gcc-7 \
+    # && rm -fr \
+    #     /var/{cache,log}/* \
+    #     /var/lib/apt/lists/* \
+    #     /root/.cache \
+    # && find /tmp/ -mindepth 1  -delete \
     && echo "1" >> /IS_CONTAINER
 
 # Move access.log to stdout and error.log to stderr
