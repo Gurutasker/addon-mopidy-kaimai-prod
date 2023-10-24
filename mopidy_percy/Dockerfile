@@ -36,7 +36,7 @@ RUN \
         libasound2-dev=1.2.4-1.1 \
         libspotify12=12.1.51-1 \
         libspotify-dev=12.1.51-1 \
-        zlib1g-dev=1:1.2.11.dfsg-1+deb10u2 \
+        zlib1g-dev=1:1.2.11.dfsg-2+deb11u2 \
         build-essential=12.9 \
         python3-dev=3.9.2-3 \
         python3-gi=3.38.0-2 \
