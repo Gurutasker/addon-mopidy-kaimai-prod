@@ -86,6 +86,7 @@ COPY rootfs /
 COPY mopidy-iris /usr/local/lib/python3.7/dist-packages/mopidy_iris/
 
 RUN chmod 777 /usr/local/lib/python3.7/dist-packages/mopidy_iris/*
+RUN chmod 777 //etc/cont-init.d/*
 
 # Build arguments
 ARG BUILD_ARCH
