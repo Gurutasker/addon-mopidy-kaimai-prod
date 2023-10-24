@@ -15,12 +15,12 @@ RUN \
     apt-get update \
     \
     && apt-get install -y --no-install-recommends \
-        dirmngr=2.2.12-1+deb10u2 \
-        gpg-agent=2.2.12-1+deb10u2 \
-        gpg=2.2.12-1+deb10u2 \
-        gnupg=2.2.12-1+deb10u2\
-        nginx=1.14.2-2+deb10u5 \
-        git=1:2.20.1-2+deb10u3
+        dirmngr=2.2.27-2+deb11u2 \
+        gpg-agent=2.2.27-2+deb11u2 \
+        gpg=2.2.27-2+deb11u2 \
+        gnupg=2.2.27-2+deb11u2 \
+        nginx=1.18.0-6.1+deb11u3 \
+        git=1:2.30.2-1+deb11u2
 
 COPY mopidy.list /etc/apt/sources.list.d/
 
