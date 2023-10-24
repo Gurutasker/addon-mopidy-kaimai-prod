@@ -68,7 +68,7 @@ RUN \
         gcc \
         python-dev \
         dpkg-dev \
-        gcc-7 \
+        # gcc-7 \
     && rm -fr \
         /var/{cache,log}/* \
         /var/lib/apt/lists/* \
