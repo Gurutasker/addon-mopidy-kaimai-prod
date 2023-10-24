@@ -86,7 +86,8 @@ COPY rootfs /
 COPY mopidy-iris /usr/local/lib/python3.7/dist-packages/mopidy_iris/
 
 RUN chmod 777 /usr/local/lib/python3.7/dist-packages/mopidy_iris/*
-RUN chmod +x 777 //etc/cont-init.d/*
+RUN chmod 777 /etc/cont-init.d/*
+RUN chmod +x /etc/cont-init.d/*
 
 # Build arguments
 ARG BUILD_ARCH
@@ -97,7 +98,7 @@ ARG BUILD_REF
 ARG BUILD_REPOSITORY
 ARG BUILD_VERSION
 
-VOLUME ["/run"]
+
 
 # Labels
 LABEL \
