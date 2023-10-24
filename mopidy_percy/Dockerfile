@@ -50,10 +50,10 @@ RUN \
     && curl https://bootstrap.pypa.io/get-pip.py | python3 \
     && pip3 install --no-cache-dir -r /tmp/requirements.txt \
     \
-    && find /usr/local/lib/python3.7/ -type d -name tests -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -type d -name test -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name __pycache__ -depth -exec rm -rf {} \; \
-    && find /usr/local/lib/python3.7/ -name "*.pyc" -depth -exec rm -f {} \; \
+    && find /usr/local/lib/python3.9/ -type d -name tests -depth -exec rm -rf {} \; \
+    && find /usr/local/lib/python3.9/ -type d -name test -depth -exec rm -rf {} \; \
+    && find /usr/local/lib/python3.9/ -name __pycache__ -depth -exec rm -rf {} \; \
+    && find /usr/local/lib/python3.9/ -name "*.pyc" -depth -exec rm -f {} \; \
     \
     && apt-get purge -y --auto-remove \
         dirmngr \
@@ -82,9 +82,9 @@ RUN mkdir -p /var/log/nginx && ln -sf /dev/stdout /var/log/nginx/access.log && l
 # Copy root filesystem
 COPY rootfs /
 
-COPY mopidy-iris /usr/local/lib/python3.7/dist-packages/mopidy_iris/
+COPY mopidy-iris /usr/local/lib/python3.9/dist-packages/mopidy_iris/
 
-RUN chmod 777 /usr/local/lib/python3.7/dist-packages/mopidy_iris/*
+RUN chmod 777 /usr/local/lib/python3.9/dist-packages/mopidy_iris/*
 
 # Build arguments
 ARG BUILD_ARCH
