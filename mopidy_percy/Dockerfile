@@ -97,6 +97,8 @@ ARG BUILD_REF
 ARG BUILD_REPOSITORY
 ARG BUILD_VERSION
 
+VOLUME ["/run"]
+
 # Labels
 LABEL \
     io.hass.name="${BUILD_NAME}" \
