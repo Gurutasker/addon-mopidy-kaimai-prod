@@ -1,10 +1,10 @@
 ---
 name: Mopidy Percy
-version: dev26
+version: dev27
 slug: mopidy_percy
 panel_icon: mdi:music-circle
 description: Mopidy is an extensible music server
-url: https://github.com/Gurutasker/addon-mopidy-lounge-prod
+url: https://github.com/Gurutasker/addon-mopidy-percy-prod
 ingress: true
 ingress_entry: iris/
 ingress_stream: true
@@ -39,4 +39,3 @@ schema:
     - name: str
       value: str
   leave_front_door_open: bool?
-init: false
