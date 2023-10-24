@@ -1,6 +1,6 @@
 ---
 name: Mopidy Percy
-version: dev46
+version: dev47
 slug: mopidy_percy
 panel_icon: mdi:music-circle
 description: Mopidy is an extensible music server
@@ -15,7 +15,7 @@ audio: true
 ports:
   6600/tcp: 6601
   5555/udp: 5556
-  4478/tcp: 6670
+  4478/tcp: 6660
 ports_description:
   6600/tcp: Mopidy
   5555/udp: Autoaudiosink
